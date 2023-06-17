@@ -14,11 +14,14 @@ namespace WordOpenDocument
     {
         private void ThisAddIn_Startup(object sender, System.EventArgs e)
         {
+            // DocumentOpen Event Occurs When a Document is Opened.
             Globals.ThisAddIn.Application.DocumentOpen += new Microsoft.Office.Interop.Word.ApplicationEvents4_DocumentOpenEventHandler(this.Application_DocumentOpen);
         }
 
+        // Add the DocumentOpen Function to "ThisAddIn" class so that when the event happens, this function will be fired.
         public void Application_DocumentOpen(Microsoft.Office.Interop.Word.Document Doc)
         {
+            // In This class, you can receive Document Data such as DocumentPath, Handle and etc
             Debug.Print("Document Opened");
 
             IntPtr hWnd = Process.GetCurrentProcess().MainWindowHandle;
