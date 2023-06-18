@@ -14,7 +14,7 @@ Basic c# VSTO for Word Event:
     - You have to call the event in "ThisAddIn_Startup"
     - Then You can Add the function to the "ThisAddIn" Class 
     - In This class, you can receive Document Data such as DocumentPath, Handle and etc
-    - In case you want to stop a document from printing, after your "Conditional Statements", you can put in below syntax: 
+    - In case you want to stop a document from printing, after your "Conditional Statements", you can put in the below syntax: 
        Cancel = true;
     - Of course, this won't prevent printing if the user right-clicks on the document and chooses printing without opening the document.
     - For your code to work on right-click too, follow the given instructions
@@ -23,5 +23,13 @@ Basic c# VSTO for Word Event:
     - You have to call the event in "ThisAddIn_Startup"
     - Then You can Add the function to the "ThisAddIn" Class 
     - In This class, you can receive Document Data such as DocumentPath, Handle and etc
-    - In case you want to stop a document from saving, after your "Conditional Statements", you can put in below syntax: 
+    - In case you want to stop a document from saving, after your "Conditional Statements", you can put in the below syntax:
+       Cancel = true;
+
+  4. Document Before Close:
+    - You have to call the event in "ThisAddIn_Startup"
+    - Then You can Add the function to the "ThisAddIn" Class
+    - In This class, you can receive Document Data such as DocumentPath, Handle and etc
+    - You can also do some actions on the document like Making the file ReadOnly and etc
+    - In case you want to stop a document from closing, after your "Conditional Statements", you can put in the below syntax: 
        Cancel = true;
