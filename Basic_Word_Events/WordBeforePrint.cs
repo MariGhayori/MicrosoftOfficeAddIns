@@ -8,7 +8,7 @@ using Office = Microsoft.Office.Core;
 using Microsoft.Office.Tools.Word;
 using System.Diagnostics;
 
-namespace WordOpenDocument
+namespace WordBeforePrint
 {
     public partial class ThisAddIn
     {
